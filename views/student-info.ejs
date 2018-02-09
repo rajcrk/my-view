@@ -1,0 +1,50 @@
+<% include partials/header %>
+<div class="row">
+	<div class="container">
+		<h3><%= info[0].NAME %></h3>
+		<!-- /////////////////////// -->
+		<!-- SEMESTER 1 RESULT LOGIN -->
+		<!-- /////////////////////// -->
+		<h6>SEMESTER 1 RESULT</h6>
+		<%  var entry;
+			var name;
+			entry = info[0].SEM1;
+			for(name in entry){ %>
+				<p> <%= name %>: <% 
+				if (entry.hasOwnProperty(name)) {
+				    var val = entry[name];
+				    
+				  }
+				 %>  <%= val %></p>
+			<% } %>
+
+			<!-- /////////////////////// -->
+			<!-- SEMESTER 2 RESULT LOGIN -->
+			<!-- /////////////////////// -->
+
+			<% if(!(info[0].SEM2 == null)){ %>
+			<p>
+				
+				<!--IF SEM2 IS PRESENT -->
+
+				<%  var entry;
+					var name;
+					entry = info[0].SEM2;
+					for(name in entry){ %>
+						<p> <%= name %>: <% 
+						if (entry.hasOwnProperty(name)) {
+						    var val = entry[name];
+						    
+						  }
+						 %>  <%= val %></p>
+					<% } %>
+			</p>
+
+
+
+			<%} else {%>
+				<p>N0 SEMESTER  2  RESULT :-(</p>
+			<% } %>
+
+	</div>
+</div>
