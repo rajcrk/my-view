@@ -5,6 +5,7 @@ var Schema = mongoose.Schema;
 var studentsSchema = new mongoose.Schema({
     REGNO: { displayName: 'REGNO', access: 'REGNO', type: 'number' },
     NAME: {type: String},
+    BATCH: {type: String},
     SEM1: {type: Object, default: null},
     SEM2: {type: Object, default: null},
     SEM3: {type: Object, default: null},
