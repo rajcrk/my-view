@@ -109,9 +109,20 @@ app.post("/batch-add/:id", function(req, res){
 });
 
 app.get("/staff-mark-view/:batch/:subject/:sem", function(req, res){
-    res.send("Hi");
+    var str = req.params.sem;
+    var query = Student.find({'BATCH': req.params.batch}).select(str);
+    query.exec(function (err, someValue) {
+        if (err) return next(err);
+        res.send(someValue);
+    });
 });
 
+
+
+
+//=======================
+//FINISHED DATABASE ENTRY 
+//=======================
 app.get("/staff-upload", function(req, res){
     res.render("staff-upload");
 });
