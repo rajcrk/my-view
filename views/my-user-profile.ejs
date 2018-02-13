@@ -1,5 +1,22 @@
 <% include partials/header %>
 <div class="row">
 	<div class="container">
+		<div class="col-lg-4">
+			<form method="POST" action="/batch-add/<%= foundUser._id %>">
+				<label for="exampleInputEmail1">Select Batch</label>
+				<select class="form-control" name="batch">
+				  <option value="2012-2016">2012-2016</option>
+				  <option value="2013-2017">2013-2017</option>
+				  <option value="2014-2018">2014-2018</option>
+				  <option value="2015-2019">2015-2019</option>
+				  <option value="2016-2020">2016-2020</option>
+				</select>
+				<br>
+				<button class="btn btn-default">Add Batch</button>
+			</form>
+		</div>
+		<div class="col-lg-8">
+			<h3>Name: <%= foundUser.username %></h3>
+		</div>
 	</div>
 </div>

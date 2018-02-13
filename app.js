@@ -80,7 +80,6 @@ app.post("/teacher-reg", function(req, res, next){
 //==============================
 //MAIN USER PROFILE PAGE DISPLAY
 //==============================
-
 app.get("/my-user-profile/:id", function(req, res){
     User.findById(req.params.id, function(err, foundUserMy){
         if(err){
@@ -90,6 +89,12 @@ app.get("/my-user-profile/:id", function(req, res){
                 res.render("my-user-profile", {foundUser: foundUserMy});
             }
     });//user findbyid end
+});
+//==========================
+//ADDING BATCH TO PROFESSORS 
+//==========================
+app.post("/batch-add/:id", function(req, res){
+    res.send("Hello");
 });
 
 app.get("/staff-upload", function(req, res){
