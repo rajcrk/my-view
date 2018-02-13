@@ -12,11 +12,40 @@
 				  <option value="2016-2020">2016-2020</option>
 				</select>
 				<br>
-				<button class="btn btn-default">Add Batch</button>
+				<label for="exampleInputEmail1">Select Subject</label>
+				<select class="form-control" name="sem">
+				  <option value="SEM1">SEM1</option>
+				  <option value="SEM2">SEM2</option>
+				  <option value="SEM3">SEM3</option>
+				</select>
+				<br>
+				<label for="exampleInputEmail1">Select Subject</label>
+				<select class="form-control" name="subject">
+				  <option value="CY6151">CY6151</option>
+				  <option value="GE6151">GE6151</option>
+				  <option value="GE6152">GE6152</option>
+				</select>
+				<br>
+				<button class="btn btn-default">Add Subject</button>
 			</form>
 		</div>
 		<div class="col-lg-8">
 			<h3>Name: <%= foundUser.username %></h3>
+			<table class="table table-striped">
+				<tr>
+					<th>Batch</th>
+					<th>Semester</th>
+					<th>Subject</th>
+				</tr>
+				<% for(var i=0; i < foundUser.batch.length; i++) { %>
+
+				   <tr>
+				     <td><a href="/staff-mark-view/<%= foundUser.batch[i].batch %>/<%= foundUser.batch[i].subject %>/<%= foundUser.batch[i].sem %>"><%= foundUser.batch[i].batch %></a></td>
+				     <td><%= foundUser.batch[i].sem %></td>
+				     <td><%= foundUser.batch[i].subject %></td>
+				   </tr>
+				<% } %>
+			</table>
 		</div>
 	</div>
 </div>

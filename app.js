@@ -81,6 +81,7 @@ app.post("/teacher-reg", function(req, res, next){
 //MAIN USER PROFILE PAGE DISPLAY
 //==============================
 app.get("/my-user-profile/:id", function(req, res){
+
     User.findById(req.params.id, function(err, foundUserMy){
         if(err){
                 console.log(err);
@@ -94,7 +95,21 @@ app.get("/my-user-profile/:id", function(req, res){
 //ADDING BATCH TO PROFESSORS 
 //==========================
 app.post("/batch-add/:id", function(req, res){
-    res.send("Hello");
+    var array_batch = { "batch": req.body.batch, "subject": req.body.subject, "sem": req.body.sem};
+    User.findById(req.params.id, function(err, foundUserMy){
+        if(err){
+                console.log(err);
+            }else{
+                // console.log(foundUserMy);
+                foundUserMy.batch.push(array_batch);
+                foundUserMy.save();
+                res.redirect("/my-user-profile/"+req.user._id);
+            }
+    });//user findbyid end
+});
+
+app.get("/staff-mark-view/:batch/:subject/:sem", function(req, res){
+    res.send("Hi");
 });
 
 app.get("/staff-upload", function(req, res){

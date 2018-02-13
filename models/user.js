@@ -5,7 +5,8 @@ var UserSchema = new mongoose.Schema({
     username: String,
     batch: [{
     	batch: String,
-    	subject: String
+    	subject: String,
+    	sem: String
     }],
     subjects: {type: Object, default: null},
     password: String
