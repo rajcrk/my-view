@@ -53,9 +53,13 @@ app.get("/", function(req ,res){
 app.get("/staff-home", function(req, res){
     res.render("staff-home");
 });
-app.post("/staff-home", function(req, res){
-
+app.post("/staff-home", passport.authenticate("local", {
+    failureRedirect: "/staff-home"
+}) ,function(req, res){
+    console.log("ho");
+    res.redirect("my-user-profile/"+req.user._id);
 });
+
 app.get("/teacher-reg", function(req, res){
     res.render("teacher-reg");
 });
@@ -109,10 +113,9 @@ app.post("/batch-add/:id", function(req, res){
 });
 
 app.get("/staff-mark-view/:batch/:subject/:sem", function(req, res){
-    var str = req.params.sem;
-    var query = Student.find({'BATCH': req.params.batch}).select(str);
+    var query = Student.find({'BATCH': req.params.batch});
     query.exec(function (err, someValue) {
-        if (err) return next(err);
+        if (err) console.log(err);
         res.send(someValue);
     });
 });
