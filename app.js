@@ -115,10 +115,11 @@ app.post("/batch-add/:id", function(req, res){
 app.get("/staff-mark-view/:batch/:subject/:sem", function(req, res){
     var sem_var = req.params.sem;
     if(sem_var == "SEM1"){
-        var query = Student.find({'BATCH': req.params.batch}).select('SEM1');
+        var query = Student.find({'BATCH': req.params.batch}).select('SEM1 REGNO NAME BATCH');
         query.exec(function (err, someValue) {
             if (err) console.log(err);
-            res.send(someValue);
+            console.log(someValue);
+            res.render("students-edit-view",{foundStudent: someValue});
         });
     }else if(sem_var == "SEM2"){
         var query = Student.find({'BATCH': req.params.batch}).select('SEM2');

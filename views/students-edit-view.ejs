@@ -1,0 +1,14 @@
+<% include partials/header %>
+<% for(var i=0; i < foundStudent.length; i++) { %>
+<div class="container">
+	<h5><%= foundStudent[i].NAME %> | REGNO:  <%= foundStudent[i].REGNO %> |  BATCH: <%= foundStudent[i].BATCH %></h5>
+	<table class="table table-bordered">
+ 		<tr>
+ 			<th>Subject</th>
+ 			<th>Grade</th>
+ 		</tr>
+ 		// Need to include for loop for looping through sem1 object of each student
+	</table>
+
+</div>
+<% } %>
