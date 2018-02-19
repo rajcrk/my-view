@@ -113,11 +113,63 @@ app.post("/batch-add/:id", function(req, res){
 });
 
 app.get("/staff-mark-view/:batch/:subject/:sem", function(req, res){
-    var query = Student.find({'BATCH': req.params.batch});
-    query.exec(function (err, someValue) {
-        if (err) console.log(err);
-        res.send(someValue);
-    });
+    var sem_var = req.params.sem;
+    if(sem_var == "SEM1"){
+        var query = Student.find({'BATCH': req.params.batch}).select('SEM1');
+        query.exec(function (err, someValue) {
+            if (err) console.log(err);
+            res.send(someValue);
+        });
+    }else if(sem_var == "SEM2"){
+        var query = Student.find({'BATCH': req.params.batch}).select('SEM2');
+        query.exec(function (err, someValue) {
+            if (err) console.log(err);
+            res.send(someValue);
+        });
+    }
+    else if(sem_var == "SEM3"){
+        var query = Student.find({'BATCH': req.params.batch}).select('SEM3');
+        query.exec(function (err, someValue) {
+            if (err) console.log(err);
+            res.send(someValue);
+        });
+    }
+    else if(sem_var == "SEM4"){
+        var query = Student.find({'BATCH': req.params.batch}).select('SEM4');
+        query.exec(function (err, someValue) {
+            if (err) console.log(err);
+            res.send(someValue);
+        });
+    }
+    else if(sem_var == "SEM5"){
+        var query = Student.find({'BATCH': req.params.batch}).select('SEM5');
+        query.exec(function (err, someValue) {
+            if (err) console.log(err);
+            res.send(someValue);
+        });
+    }
+    else if(sem_var == "SEM6"){
+        var query = Student.find({'BATCH': req.params.batch}).select('SEM6');
+        query.exec(function (err, someValue) {
+            if (err) console.log(err);
+            res.send(someValue);
+        });
+    }
+    else if(sem_var == "SEM7"){
+        var query = Student.find({'BATCH': req.params.batch}).select('SEM7');
+        query.exec(function (err, someValue) {
+            if (err) console.log(err);
+            res.send(someValue);
+        });
+    }
+    else if(sem_var == "SEM8"){
+        var query = Student.find({'BATCH': req.params.batch}).select('SEM8');
+        query.exec(function (err, someValue) {
+            if (err) console.log(err);
+            res.send(someValue);
+        });
+    }
+    
 });
 
 
