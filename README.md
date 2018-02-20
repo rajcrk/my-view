@@ -7,7 +7,7 @@ Node based Student Result Management
 The template for the excel to be in 
 ![alt text](https://github.com/rajcrk/my-view/blob/master/git-template.png)
 
-<b>To get Started:</b>
+<b>To get Started:</b><br>
 Clone the repository using the command on the terminal
 ```
 git clone https://github.com/rajcrk/my-view.git
