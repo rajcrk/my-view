@@ -7,7 +7,20 @@
  			<th>Subject</th>
  			<th>Grade</th>
  		</tr>
- 		// Need to include for loop for looping through sem1 object of each student
+ 		
+ 		<%  var entry;
+			var name;
+			entry = foundStudent[i].SEM1;
+			for(name in entry){ %>
+				<tr>
+				<td> <%= name %>:</td> <% 
+				if (entry.hasOwnProperty(name)) {
+				    var val = entry[name];
+				    
+				  }
+				 %>  <td><%= val %></td>
+				 </tr>
+			<% } %>
 	</table>
 
 </div>
