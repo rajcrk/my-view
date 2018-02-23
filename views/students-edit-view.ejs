@@ -1,11 +1,12 @@
 <% include partials/header %>
 <% for(var i=0; i < foundStudent.length; i++) { %>
-<div class="container">
+<div class="container" >
 	<h5><%= foundStudent[i].NAME %> | REGNO:  <%= foundStudent[i].REGNO %> |  BATCH: <%= foundStudent[i].BATCH %></h5>
 	<table class="table table-bordered">
  		<tr>
  			<th>Subject</th>
  			<th>Grade</th>
+            <th>Action <%= foundStudent.subject %></th>
  		</tr>
  		
  		<%  var entry;
@@ -18,7 +19,21 @@
 				    var val = entry[name];
 				    
 				  }
-				 %>  <td><%= val %></td>
+				 if(name == foundStudent.subject){ %>
+                    <form method="POST" action="/staff-mark-view/<%= foundStudent[i].BATCH %>/<%=  %>">
+                         <td>
+                            <input type="text" class="form-control" value="<%= val %>" name="changedGrade"></input>
+                         </td>
+                         <td style="text-align: center;">
+                            <button class="btn btn-default">Submit</button>
+                         </td>
+                     </form>
+                 <% }else{ %>
+                        <td><%= val %></td>
+                        <td></td>
+                 <% } %>
+                  
+                 
 				 </tr>
 			<% } %>
 	</table>

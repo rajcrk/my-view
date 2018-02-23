@@ -119,6 +119,10 @@ app.get("/staff-mark-view/:batch/:subject/:sem", function(req, res){
         query.exec(function (err, someValue) {
             if (err) console.log(err);
             console.log(someValue);
+            var subject = req.params.subject;
+            console.log("--->");
+            someValue.subject = subject;
+            console.log(someValue.subject);
             res.render("students-edit-view",{foundStudent: someValue});
         });
     }else if(sem_var == "SEM2"){
@@ -173,6 +177,12 @@ app.get("/staff-mark-view/:batch/:subject/:sem", function(req, res){
     
 });
 
+//===============================
+//CHANGING THE GRADE OF A STUDENT
+//===============================
+app.post("/staff-mark-view/:batch/:subject/:sem", function(req, res){
+
+});
 
 
 
@@ -236,5 +246,5 @@ app.post("/user-roll-get", function(req, res){
 
 
 app.listen(3300, function(){
-    console.log("The Server Has Started");
+    console.log("The Server Has Started at 3300");
 });
