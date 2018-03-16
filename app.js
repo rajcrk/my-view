@@ -245,6 +245,6 @@ app.post("/user-roll-get", function(req, res){
 
 
 
-app.listen(3300, function(){
-    console.log("The Server Has Started at 3300");
+app.listen(process.env.PORT, process.env.IP, function(){
+    console.log("The Server Has Started");
 });

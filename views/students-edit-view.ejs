@@ -20,8 +20,10 @@
 				    
 				  }
 				 if(name == foundStudent.subject){ %>
-                    <form method="POST" action="/staff-mark-view/<%= foundStudent[i].BATCH %>/<%=  %>">
+                    <form method="POST" action="/staff-mark-view/student-grade-change">
                          <td>
+                            <input type="hidden" class="form-control" value="<%= foundStudent[i]._id %>" name="changeId"></input>
+                            <input type="hidden" class="form-control" value="<%= foundStudent[i]._id %>" name="changeId"></input>
                             <input type="text" class="form-control" value="<%= val %>" name="changedGrade"></input>
                          </td>
                          <td style="text-align: center;">
