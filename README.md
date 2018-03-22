@@ -3,8 +3,8 @@ Node based Student Result Management
 
 https://view-gem.herokuapp.com/
 
-<b>Description:</b> A Node Application to track and monitor, store result of individual Undergrad Students in mongoDB and generate individual report for them.<br>
-<strong>License:</strong> Open to anyone.<br>
+<b>Description:</b> A Node Application to track and monitor, store result of individual Undergrad Students in mongoDB and generate individual report for them. ( Yikes! If you're a student, Sorry buddy 😅).<br>
+<strong>License:</strong> Open to anyone who wants to mess around.<br>
 
 The template for the excel to be in 
 ![alt text](https://github.com/rajcrk/my-view/blob/master/git-template.png)
