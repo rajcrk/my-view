@@ -26,3 +26,5 @@ npm install
 ```
 node app.js
 ```
+<b>Preview of work in progress !</b>
+![alt text](https://github.com/rajcrk/my-view/blob/master/READ_Images/screencapture-localhost-3300-1521829221059.png)
