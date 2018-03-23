@@ -126,10 +126,15 @@ app.get("/staff-mark-view/:batch/:subject/:sem", function(req, res){
             res.render("students-edit-view",{foundStudent: someValue});
         });
     }else if(sem_var == "SEM2"){
-        var query = Student.find({'BATCH': req.params.batch}).select('SEM2');
+        var query = Student.find({'BATCH': req.params.batch}).select('SEM2 REGNO NAME BATCH');
         query.exec(function (err, someValue) {
             if (err) console.log(err);
-            res.send(someValue);
+            console.log(someValue);
+            var subject = req.params.subject;
+            console.log("--->");
+            someValue.subject = subject;
+            console.log(someValue.subject);
+            res.render("students-edit-view-2s",{foundStudent: someValue});
         });
     }
     else if(sem_var == "SEM3"){
@@ -242,9 +247,16 @@ app.post("/user-roll-get", function(req, res){
 
 });
 
+//========================//
+// Development Port Number//
+//========================//
+// app.listen(3300, function(){
+//     console.log("The Server Has Started at 3300");
+// });
 
-
-
+//========================//
+// Production Port Number//
+//========================//
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("The Server Has Started");
 });
