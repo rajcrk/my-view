@@ -138,45 +138,75 @@ app.get("/staff-mark-view/:batch/:subject/:sem", function(req, res){
         });
     }
     else if(sem_var == "SEM3"){
-        var query = Student.find({'BATCH': req.params.batch}).select('SEM3');
+        var query = Student.find({'BATCH': req.params.batch}).select('SEM3 REGNO NAME BATCH');
         query.exec(function (err, someValue) {
             if (err) console.log(err);
-            res.send(someValue);
+            console.log(someValue);
+            var subject = req.params.subject;
+            console.log("--->");
+            someValue.subject = subject;
+            console.log(someValue.subject);
+            res.render("students-edit-view-3s",{foundStudent: someValue});
         });
     }
     else if(sem_var == "SEM4"){
-        var query = Student.find({'BATCH': req.params.batch}).select('SEM4');
+        var query = Student.find({'BATCH': req.params.batch}).select('SEM4 REGNO NAME BATCH');
         query.exec(function (err, someValue) {
             if (err) console.log(err);
-            res.send(someValue);
+            console.log(someValue);
+            var subject = req.params.subject;
+            console.log("--->");
+            someValue.subject = subject;
+            console.log(someValue.subject);
+            res.render("students-edit-view-4s",{foundStudent: someValue});
         });
     }
     else if(sem_var == "SEM5"){
-        var query = Student.find({'BATCH': req.params.batch}).select('SEM5');
+        var query = Student.find({'BATCH': req.params.batch}).select('SEM5 REGNO NAME BATCH');
         query.exec(function (err, someValue) {
             if (err) console.log(err);
-            res.send(someValue);
+            console.log(someValue);
+            var subject = req.params.subject;
+            console.log("--->");
+            someValue.subject = subject;
+            console.log(someValue.subject);
+            res.render("students-edit-view-5s",{foundStudent: someValue});
         });
     }
     else if(sem_var == "SEM6"){
-        var query = Student.find({'BATCH': req.params.batch}).select('SEM6');
+        var query = Student.find({'BATCH': req.params.batch}).select('SEM6 REGNO NAME BATCH');
         query.exec(function (err, someValue) {
             if (err) console.log(err);
-            res.send(someValue);
+            console.log(someValue);
+            var subject = req.params.subject;
+            console.log("--->");
+            someValue.subject = subject;
+            console.log(someValue.subject);
+            res.render("students-edit-view-6s",{foundStudent: someValue});
         });
     }
     else if(sem_var == "SEM7"){
-        var query = Student.find({'BATCH': req.params.batch}).select('SEM7');
+        var query = Student.find({'BATCH': req.params.batch}).select('SEM7 REGNO NAME BATCH');
         query.exec(function (err, someValue) {
             if (err) console.log(err);
-            res.send(someValue);
+            console.log(someValue);
+            var subject = req.params.subject;
+            console.log("--->");
+            someValue.subject = subject;
+            console.log(someValue.subject);
+            res.render("students-edit-view-7s",{foundStudent: someValue});
         });
     }
     else if(sem_var == "SEM8"){
-        var query = Student.find({'BATCH': req.params.batch}).select('SEM8');
+        var query = Student.find({'BATCH': req.params.batch}).select('SEM8 REGNO NAME BATCH');
         query.exec(function (err, someValue) {
             if (err) console.log(err);
-            res.send(someValue);
+            console.log(someValue);
+            var subject = req.params.subject;
+            console.log("--->");
+            someValue.subject = subject;
+            console.log(someValue.subject);
+            res.render("students-edit-view-8s",{foundStudent: someValue});
         });
     }
     
