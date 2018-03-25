@@ -28,3 +28,6 @@ node app.js
 ```
 <b>Preview of work in progress !</b>
 ![alt text](https://github.com/rajcrk/my-view/blob/master/READ_Images/screencapture-localhost-3300-1521829221059.png)
+
+<b>Staff Profile View</b>
+![alt text](https://github.com/rajcrk/my-view/blob/master/READ_Images/screencapture-localhost-3300-my-user-profile-5a82f85692cd2b02d23e594c-1521997262410.png)
