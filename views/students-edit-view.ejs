@@ -23,8 +23,9 @@
                     <form method="POST" action="/staff-mark-view/student-grade-change">
                          <td>
                             <input type="hidden" class="form-control" value="<%= foundStudent[i]._id %>" name="changeId"></input>
-                            <input type="hidden" class="form-control" value="<%= foundStudent[i]._id %>" name="changeId"></input>
-                            <input type="text" class="form-control" value="<%= val %>" name="changedGrade"></input>
+                            <input type="hidden" class="form-control" value="<%= name %>" name="changeSub"></input>
+                            <input type="hidden" class="form-control" value="SEM1" name="changeSem"></input>
+                            <input type="text" class="form-control" value="<%= val %>" name="changeGrade"></input>
                          </td>
                          <td style="text-align: center;">
                             <button class="btn btn-default">Submit</button>
