@@ -218,9 +218,9 @@ app.get("/staff-mark-view/:batch/:subject/:sem", function(req, res){
 app.post("/staff-mark-view/student-grade-change", function(req, res){
     var myQuery = { 
         _id: req.body.changeId,
-        SEM1: Object
+        
 
-     };
+     }.SEM1;
     var changeSem_tmp = req.body.changeSem;
     var changeGrade_tmp = req.body.changeGrade;
     var name_tmp = req.body.changeSub; 
