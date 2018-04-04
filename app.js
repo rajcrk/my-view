@@ -216,40 +216,13 @@ app.get("/staff-mark-view/:batch/:subject/:sem", function(req, res){
 //CHANGING THE GRADE OF A STUDENT
 //===============================
 app.post("/staff-mark-view/student-grade-change", function(req, res){
-    // var query = { _id: req.body.changeId };
     var name_tmp = req.body.changeSub; 
     var changeSem_tmp = req.body.changeSem;
-    // Student.findOne(query, changeSem_tmp, function(err, result) {
-    //     if (err) throw err;
-    //     console.log(result);
-    //     res.send(result);
-    //   });
     var myQuery = { 
         _id: req.body.changeId,
     };
     // var changeSem_tmp = req.body.changeSem;
     var changeGrade_tmp = req.body.changeGrade;
-    // var name_tmp = req.body.changeSub; 
-    // var objToMe = new Object;
-    // objToMe[changeSem_tmp];
-    // var objToMe2 = new Object;
-    // objToMe2[name_tmp] = changeGrade_tmp;
-    // objToMe[changeSem_tmp] = objToMe2;
-    // console.log(objToMe);
-    // console.log(objToMe2);
-
-    // //var updateVal = {};
-    // console.log("new Grade");
-    // console.log(changeGrade_tmp);
-    // console.log("Semester to change");
-    // console.log(changeSem_tmp);
-    
-    // changeSem_tmp[name_tmp] = changeGrade_tmp;
-    // console.log("Subject to be changed:");
-    // console.log(name_tmp);
-    // console.log("the obj to be passed");
-    // console.log(changeSem_tmp.name_tmp);
-    // var newValues = { $set: objToMe2 }
     var changeSetValue = changeSem_tmp+"."+name_tmp;
     console.log("--------");
     console.log(changeSetValue);
