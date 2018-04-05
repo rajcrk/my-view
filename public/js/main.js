@@ -5,15 +5,16 @@ var sGradeCheck = 0,
 		cGradeCheck = 0,
 		dGradeCheck = 0,
 		eGradeCheck = 0,
-		uGradeCheck = 0;
+		uGradeCheck = 0,
+		avgPassPercentage = 0,
+		totalStd = 0;
 $(document).ready(function(){
-
-	alert("HHH");
 	$('input[type=text]').each(function(){
+		totalStd++;
 	    var checkGrade = $(this).val();
 	    // alert(checkGrade);
 	    if(checkGrade == "S"){
-	    	alert(sGradeCheck);
+	    	// alert(sGradeCheck);
 	    	sGradeCheck++;
 	    }else if(checkGrade == "A"){
 	    	aGradeCheck++;
@@ -28,16 +29,14 @@ $(document).ready(function(){
 	    }else if(checkGrade == "U"){
 	    	uGradeCheck++;
 	    }else{
-	    	
+
 	    }
 
 	});
+	avgPassPercentage = (sGradeCheck + aGradeCheck + bGradeCheck + cGradeCheck + dGradeCheck + eGradeCheck)/totalStd;
+	avgPassPercentage = avgPassPercentage * 100;
 	readySet();
 	$('#graphBtn').removeAttr("disabled");
-	// $('#graphBtn').click(function(){
-	// 	alert("Hi");
-	// 	$("#graphB").append("<canvas id="myChart"></canvas>");
-	// });
 });
 
 
