@@ -6,6 +6,7 @@ https://view-gem.herokuapp.com/ <br>
 PS: This is still under development, If you find a bug 🐛 be sure to raise an Issue.
 
 <b>Description:</b> A Node Application to track and monitor, store result of individual Undergrad Students in mongoDB and generate individual report for them. ( Yikes! If you're a student, Sorry buddy 😅).<br>
+You will need to have <a href="https://nodejs.org/en/download/"> Node Js </a> and <a href="https://www.mongodb.com/download-center">Mongo DB</a> installed.<br>
 <strong>License:</strong> Open to anyone who wants to mess around.<br>
 
 The template for the excel to be in 
