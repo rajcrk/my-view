@@ -1,6 +1,9 @@
 <% include partials/header %>
 <div class="row">
 	<div class="container">
+		<% if(info.length == 0){ %>
+			<h3>No Such User Found, Sorry Buddy !</h3>
+	 <%	}else{ %>
 		<h3><%= info[0].NAME %></h3>
 		<!-- /////////////////////// -->
 		<!-- SEMESTER 1 RESULT LOGIN -->
@@ -16,7 +19,9 @@
 				    
 				  }
 				 %>  <%= val %></p>
-			<% } %>
+	<% }
+
+			 %>
 
 			<!-- /////////////////////// -->
 			<!-- SEMESTER 2 RESULT LOGIN -->
@@ -45,6 +50,6 @@
 			<%} else {%>
 				<p>N0 SEMESTER  2  RESULT :-(</p>
 			<% } %>
-
+<% } %>
 	</div>
 </div>
