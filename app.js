@@ -301,6 +301,16 @@ app.post("/user-roll-get", function(req, res){
 
 });
 
+
+
+//================================
+//Help Line Page Get Request 
+//Thats why its at the end ! Silly
+//================================
+app.get("/help-line", function(req, res){
+    res.render("help-line");
+});
+
 //========================//
 // Development Port Number//
 // //========================//
