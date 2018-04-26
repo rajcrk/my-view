@@ -9,7 +9,7 @@ PS: This is still under development, If you find a bug 🐛 be sure to raise an 
 You will need to have <a href="https://nodejs.org/en/download/"> Node Js </a> and <a href="https://www.mongodb.com/download-center">Mongo DB</a>pre-installed before you run this application.<br>
 <strong>License:</strong> Open to anyone who wants to mess around.<br>
 
-The template for the excel to be in 
+The template for the excel to be in (This is an absolute necessary)
 ![alt text](https://github.com/rajcrk/my-view/blob/master/git-template.png)
 
 <b>To get Started:</b><br>
