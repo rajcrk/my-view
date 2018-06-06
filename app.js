@@ -70,7 +70,6 @@ app.post("/teacher-reg", function(req, res, next){
         }), req.body.password, function(err, user){
 
         if(err){
-        	console.log("hi ");
             console.log(err);
             return res.render('teacher-reg');
         }
