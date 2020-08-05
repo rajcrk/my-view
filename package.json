@@ -14,7 +14,7 @@
     "connect-mongo": "^2.0.1",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
-    "express-fileupload": "^0.4.0",
+    "express-fileupload": "^1.1.9",
     "express-session": "^1.15.6",
     "mongo-xlsx": "^1.0.12",
     "mongoose": "^5.7.5",
